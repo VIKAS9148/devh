@@ -27,6 +27,11 @@ public class ReadJSON {
     }
 }
 
+<student>
+    <firstname>Sumanth</firstname>
+    <lastname>Gowda</lastname>
+</student>
+
 
 
 
