@@ -26,3 +26,42 @@ public class ReadJSON {
         System.out.println("Lastname: " + lname);
     }
 }
+
+
+
+
+package what.what;
+
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
+import java.io.File;
+
+public class ReadXML {
+    public static void main(String[] args) {
+        try {
+            // Load XML file
+            File file = new File("XML/student.xml");
+
+            // Create SAX reader
+            SAXReader reader = new SAXReader();
+
+            // Read document
+            Document document = reader.read(file);
+
+            // Get root element
+            Element root = document.getRootElement();
+
+            // Read values
+            String fname = root.elementText("firstname");
+            String lname = root.elementText("lastname");
+
+            // Print output
+            System.out.println("First Name: " + fname);
+            System.out.println("Last Name: " + lname);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
